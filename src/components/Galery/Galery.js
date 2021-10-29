@@ -1,5 +1,10 @@
 import React from "react";
-import { CircularProgress, ImageList, ImageListItem } from "@material-ui/core";
+import {
+  CircularProgress,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+} from "@material-ui/core";
 
 export default class Galery extends React.Component {
   state = {
@@ -27,6 +32,8 @@ export default class Galery extends React.Component {
           style={{
             height: "100vh",
             display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <CircularProgress size={100} />
@@ -60,6 +67,7 @@ export default class Galery extends React.Component {
                   width: "200px",
                 }}
               />
+              <ImageListItemBar title={image.name} />
             </ImageListItem>
           ))}
         </ImageList>
