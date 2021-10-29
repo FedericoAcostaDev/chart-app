@@ -57,17 +57,19 @@ export default class Galery extends React.Component {
         >
           {this.state.image.map((image) => (
             <ImageListItem cols={(image.width / 2).toFixed(0)}>
-              <img
-                alt="alt"
-                src={image.url_original}
-                key={image.url_original}
-                loading="lazy"
-                style={{
-                  height: "200px",
-                  width: "200px",
-                }}
-              />
-              <ImageListItemBar title={image.name} />
+              <a href={"http://google.com"}>
+                <img
+                  alt="alt"
+                  src={image.url_original}
+                  key={image.url_original}
+                  loading="lazy"
+                  style={{
+                    height: "200px",
+                    width: "200px",
+                  }}
+                />
+                <ImageListItemBar title={image.name} />
+              </a>
             </ImageListItem>
           ))}
         </ImageList>
