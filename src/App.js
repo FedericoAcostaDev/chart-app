@@ -1,9 +1,9 @@
 import Layout from "./components/Layout";
 import { Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import PageOne from "./pages/PageOne";
-import PageTwo from "./pages/PageTwo";
-import PageThree from "./pages/PageThree";
+import Home from "./pages/Home/Home";
+import PageOne from "./pages/PageOne/PageOne";
+import PageTwo from "./pages/PageTwo/PageTwo";
+import PageThree from "./pages/PageThree/PageThree";
 
 function App() {
   return (
