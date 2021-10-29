@@ -1,8 +1,8 @@
 import React from "react";
-import { CircularProgress, GridListTile } from "@material-ui/core";
+import { CircularProgress, GridListTile, GridList } from "@material-ui/core";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export default class FetchRandomUser extends React.Component {
+export default class Galery extends React.Component {
   state = {
     loading: true,
     image: null,
@@ -42,19 +42,27 @@ export default class FetchRandomUser extends React.Component {
     }
 
     return (
-      <GridListTile>
-        {this.state.image.map((image) => (
-          <LazyLoadImage
-            alt="alt"
-            src={image.url_original}
-            key={image.url_original}
-            style={{
-              height: "20vh",
-              width: "auto",
-            }}
-          />
-        ))}
-      </GridListTile>
+      <div>
+        <GridList cellHeight={200} cols={4}>
+          {this.state.image.map((image) => (
+            <GridListTile
+              cols={(image.width / 2).toFixed(0)}
+              style={{
+                flexGrow: "1",
+              }}
+            >
+              <LazyLoadImage
+                alt="alt"
+                src={image.url_original}
+                key={image.url_original}
+                style={{
+                  maxWidth: "40vh",
+                }}
+              />
+            </GridListTile>
+          ))}
+        </GridList>
+      </div>
     );
 
     //DELETE ALL DOWN BELOw
