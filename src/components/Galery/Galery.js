@@ -1,6 +1,5 @@
 import React from "react";
 import { CircularProgress, ImageList, ImageListItem } from "@material-ui/core";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class Galery extends React.Component {
   state = {
@@ -16,7 +15,7 @@ export default class Galery extends React.Component {
     //console.log(data.map((data) => data.sector));
 
     this.setState({
-      image: data.filter((elem) => elem.type === 0).splice(0, 20),
+      image: data.filter((elem) => elem.type === 0).splice(0, 100),
       loading: false,
     });
   }
@@ -28,8 +27,6 @@ export default class Galery extends React.Component {
           style={{
             height: "100vh",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           <CircularProgress size={100} />
@@ -49,14 +46,15 @@ export default class Galery extends React.Component {
               cols={(image.width / 2).toFixed(0)}
               style={{
                 flexGrow: "1",
-                alignItems: "flex-start",
               }}
             >
-              <LazyLoadImage
+              <img
                 alt="alt"
                 src={image.url_original}
                 key={image.url_original}
+                loading="lazy"
                 style={{
+                  alignItems: "flex-start",
                   height: "200px",
                   width: "200px",
                 }}
