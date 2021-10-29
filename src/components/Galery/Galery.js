@@ -1,5 +1,5 @@
 import React from "react";
-import { CircularProgress, GridListTile, GridList } from "@material-ui/core";
+import { CircularProgress, ImageList, ImageListItem } from "@material-ui/core";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class Galery extends React.Component {
@@ -43,12 +43,13 @@ export default class Galery extends React.Component {
 
     return (
       <div>
-        <GridList cellHeight={200} cols={4}>
+        <ImageList cellHeight={200} cols={4}>
           {this.state.image.map((image) => (
-            <GridListTile
+            <ImageListItem
               cols={(image.width / 2).toFixed(0)}
               style={{
                 flexGrow: "1",
+                alignItems: "flex-start",
               }}
             >
               <LazyLoadImage
@@ -56,12 +57,13 @@ export default class Galery extends React.Component {
                 src={image.url_original}
                 key={image.url_original}
                 style={{
-                  maxWidth: "40vh",
+                  height: "200px",
+                  width: "200px",
                 }}
               />
-            </GridListTile>
+            </ImageListItem>
           ))}
-        </GridList>
+        </ImageList>
       </div>
     );
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Galery from "../../components/Galery";
+import Galery from "../../components/Galery/Galery";
 import {} from "@material-ui/core";
 const PageOne = (props) => {
   return (
