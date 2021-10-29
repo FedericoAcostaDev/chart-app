@@ -1,4 +1,6 @@
 import React from "react";
+import { CircularProgress, Container } from "@material-ui/core";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class FetchRandomUser extends React.Component {
   state = {
@@ -21,7 +23,18 @@ export default class FetchRandomUser extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <div>loading...</div>;
+      return (
+        <div
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress size={100} />
+        </div>
+      );
     }
 
     if (!this.state.image) {
@@ -29,11 +42,15 @@ export default class FetchRandomUser extends React.Component {
     }
 
     return (
-      <div>
+      <Container className="Galery">
         {this.state.image.map((image) => (
-          <img alt="alt" src={image.url_original} key={image.url_original} />
+          <LazyLoadImage
+            alt="alt"
+            src={image.url_original}
+            key={image.url_original}
+          />
         ))}
-      </div>
+      </Container>
     );
 
     //DELETE ALL DOWN BELOw
