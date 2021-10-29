@@ -5,7 +5,7 @@ const PageOne = (props) => {
   return (
     <div
       style={{
-        marginTop: "20vh",
+        marginTop: "5vh",
       }}
     >
       <Galery />

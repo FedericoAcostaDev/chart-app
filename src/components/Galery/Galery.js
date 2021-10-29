@@ -40,21 +40,22 @@ export default class Galery extends React.Component {
 
     return (
       <div>
-        <ImageList cellHeight={200} cols={4}>
+        <ImageList
+          cellHeight={200}
+          cols={4}
+          style={{
+            flexGrow: "1",
+            justifyContent: "center",
+          }}
+        >
           {this.state.image.map((image) => (
-            <ImageListItem
-              cols={(image.width / 2).toFixed(0)}
-              style={{
-                flexGrow: "1",
-              }}
-            >
+            <ImageListItem cols={(image.width / 2).toFixed(0)}>
               <img
                 alt="alt"
                 src={image.url_original}
                 key={image.url_original}
                 loading="lazy"
                 style={{
-                  alignItems: "flex-start",
                   height: "200px",
                   width: "200px",
                 }}
