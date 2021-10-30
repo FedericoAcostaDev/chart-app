@@ -7,13 +7,13 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const ItemHeight = (props) => (
+const ItemWidth = (props) => (
   <Card sx={{ height: "100%" }} {...props}>
     <CardContent>
       <Grid container spacing={3} sx={{ justifyContent: "space-between" }}>
         <Grid item>
           <Typography color="textSecondary" gutterBottom variant="h6">
-            Item Height
+            Item Width
           </Typography>
           <Typography color="textPrimary" variant="h3">
             75.5%
@@ -27,4 +27,4 @@ const ItemHeight = (props) => (
   </Card>
 );
 
-export default ItemHeight;
+export default ItemWidth;

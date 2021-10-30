@@ -58,7 +58,7 @@ export default class GaleryVideos extends React.Component {
         >
           {this.state.image.map((image) => (
             <ImageListItem cols={(image.width / 2).toFixed(0)}>
-              <a href={"http://google.com"}>
+              <a href="/page-four">
                 <AiFillPlayCircle
                   style={{
                     height: "auto",

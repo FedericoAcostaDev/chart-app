@@ -75,7 +75,7 @@ const Model3 = (props) => {
 
   return (
     <Card {...props}>
-      <CardHeader title="Traffic by Device" />
+      <CardHeader title="Model 3" />
       <Divider />
       <CardContent>
         <Box
