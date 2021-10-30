@@ -20,8 +20,8 @@ const PerFrame = (props) => {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [18, 5, 19, 27, 29, 19, 20],
-        label: "This year",
+        data: [18, 10, 20, 30, 40, 50, 60],
+        label: "This File",
         maxBarThickness: 10,
       },
       {
@@ -31,11 +31,11 @@ const PerFrame = (props) => {
         borderRadius: 4,
         categoryPercentage: 0.5,
         data: [11, 20, 12, 29, 30, 25, 13],
-        label: "Last year",
+        label: "Benchmark",
         maxBarThickness: 10,
       },
     ],
-    labels: ["1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug"],
+    labels: ["1", "2 ", "3 ", "4 ", "5", "6 "],
   };
 
   const options = {
