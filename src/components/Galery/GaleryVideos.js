@@ -5,6 +5,7 @@ import {
   ImageListItem,
   ImageListItemBar,
 } from "@material-ui/core";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 export default class GaleryVideos extends React.Component {
   state = {
@@ -58,6 +59,12 @@ export default class GaleryVideos extends React.Component {
           {this.state.image.map((image) => (
             <ImageListItem cols={(image.width / 2).toFixed(0)}>
               <a href={"http://google.com"}>
+                <AiFillPlayCircle
+                  style={{
+                    height: "auto",
+                    width: "50px",
+                  }}
+                />
                 <video
                   alt="alt"
                   src={image.url_original}
@@ -68,6 +75,7 @@ export default class GaleryVideos extends React.Component {
                     width: "200px",
                   }}
                 />
+
                 <ImageListItemBar title={image.name} />
               </a>
             </ImageListItem>
