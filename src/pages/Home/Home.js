@@ -2,11 +2,7 @@ import React from "react";
 import SearchFilter from "../../components/SearchFilter";
 
 const Home = () => {
-  return (
-    <div>
-      <SearchFilter />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
