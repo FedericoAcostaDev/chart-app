@@ -20,7 +20,7 @@ export default class GaleryVideos extends React.Component {
     //console.log(data.map((data) => data.sector));
 
     this.setState({
-      image: data.filter((elem) => elem.type === 0).splice(0, 100),
+      image: data.filter((elem) => elem.type === 1).splice(0, 100),
       loading: false,
     });
   }
@@ -58,7 +58,7 @@ export default class GaleryVideos extends React.Component {
           {this.state.image.map((image) => (
             <ImageListItem cols={(image.width / 2).toFixed(0)}>
               <a href={"http://google.com"}>
-                <img
+                <video
                   alt="alt"
                   src={image.url_original}
                   key={image.url_original}
