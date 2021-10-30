@@ -6,7 +6,7 @@ import {
   ImageListItemBar,
 } from "@material-ui/core";
 
-export default class Galery extends React.Component {
+export default class GaleryVideos extends React.Component {
   state = {
     loading: true,
     image: null,
@@ -77,19 +77,3 @@ export default class Galery extends React.Component {
     );
   }
 }
-
-//DELETE ALL DOWN BELOw
-//console.log(this.state.image[0]);
-//console.log(this.state);
-
-// let eachImage = "";
-// for (let i = 0; i < this.state.image.length; i++) {
-//   let img_src = this.state.image[i].url_original;
-//   //console.log(img_src);
-//   eachImage += `${(
-//     <img alt="" href={window.webkitURL.createObjectURL(img_src)} />
-//   )}`;
-// }
-
-// //console.log(eachImage);
-// return eachImage;

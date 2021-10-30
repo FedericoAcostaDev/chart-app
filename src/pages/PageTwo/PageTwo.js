@@ -1,7 +1,16 @@
 import React from "react";
-
-const PageTwo = () => {
-  return <h1>Page Two</h1>;
+import {} from "@material-ui/core";
+import GaleryVideos from "../../components/Galery/GaleryVideos";
+const PageOne = (props) => {
+  return (
+    <div
+      style={{
+        marginTop: "5vh",
+      }}
+    >
+      <GaleryVideos />
+    </div>
+  );
 };
 
-export default PageTwo;
+export default PageOne;
