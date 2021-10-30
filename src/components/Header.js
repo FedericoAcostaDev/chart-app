@@ -62,11 +62,6 @@ const Header = () => {
                 All files
               </Link>
             </li>
-            <li>
-              <Link to="/page-four" onClick={menuToggleHandler}>
-                By sector
-              </Link>
-            </li>
           </ul>
         </nav>
         <div className={classes.header__content__toggle}>
