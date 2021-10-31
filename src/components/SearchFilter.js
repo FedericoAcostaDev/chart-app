@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { ImageList, ImageListItem, ImageListItemBar } from "@material-ui/core";
+import { AiFillPlayCircle } from "react-icons/ai";
+import classes from "./Galery/Galery.module.scss";
 
 const SearchFilter = () => {
   const [product, setProduct] = useState([]);
@@ -40,7 +43,48 @@ const SearchFilter = () => {
           }
         })
         .map((item) => {
-          return <p>{item.name} </p>;
+          if (item.type === 0) {
+            return (
+              <div>
+                <ImageList className={classes.list} cellHeight={200} cols={4}>
+                  <ImageListItem cols={(item.width / 2).toFixed(0)}>
+                    <a href="/page-four">
+                      <img
+                        className={classes.item}
+                        alt="alt"
+                        src={item.url_original}
+                        key={item.url_original}
+                        loading="lazy"
+                      />
+                      <ImageListItemBar title={item.name} />
+                    </a>
+                  </ImageListItem>
+                </ImageList>
+              </div>
+            );
+          }
+          if (item.type === 1) {
+            return (
+              <div>
+                <ImageList className={classes.list} cellHeight={200} cols={4}>
+                  <ImageListItem cols={(item.width / 2).toFixed(0)}>
+                    <a href="/page-four">
+                      <AiFillPlayCircle className={classes.playIcon} />
+                      <video
+                        className={classes.video}
+                        alt="alt"
+                        src={item.url_original}
+                        key={item.url_original}
+                        loading="lazy"
+                      />
+
+                      <ImageListItemBar title={item.name} />
+                    </a>
+                  </ImageListItem>
+                </ImageList>
+              </div>
+            );
+          }
         })}
     </div>
   );
