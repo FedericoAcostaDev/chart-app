@@ -7,9 +7,10 @@ import {
   ImageListItemBar,
   GridListTile,
 } from "@material-ui/core";
+import { AiFillPlayCircle } from "react-icons/ai";
 import classes from "./Galery.module.scss";
 
-const SearchImages = () => {
+const SearchVideos = () => {
   const [product, setProduct] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -37,7 +38,7 @@ const SearchImages = () => {
             setSearch(e.target.value);
           }}
           fullWidth
-          label="Search for Images!"
+          label="Search for videos!"
         />
       </form>
 
@@ -50,19 +51,21 @@ const SearchImages = () => {
           }
         })
         .map((item) => {
-          if (item.type === 0) {
+          if (item.type === 1) {
             return (
               <div className={classes.row}>
                 <GridList className={classes.list} cellHeight={200} cols={4}>
-                  <GridListTile cols={(item.width / 3).toFixed(0)}>
+                  <GridListTile cols={(item.width / 2).toFixed(0)}>
                     <a href="/page-four">
-                      <img
-                        className={classes.item}
+                      <AiFillPlayCircle className={classes.playIcon} />
+                      <video
+                        className={classes.video}
                         alt="alt"
                         src={item.url_original}
                         key={item.url_original}
                         loading="lazy"
                       />
+
                       <ImageListItemBar title={item.name} />
                     </a>
                   </GridListTile>
@@ -75,4 +78,4 @@ const SearchImages = () => {
   );
 };
 
-export default SearchImages;
+export default SearchVideos;

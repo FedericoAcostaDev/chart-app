@@ -8,7 +8,7 @@ import {
   GridListTile,
 } from "@material-ui/core";
 import { AiFillPlayCircle } from "react-icons/ai";
-import classes from "../Galery/Galery.module.scss";
+import classes from "./Galery.module.scss";
 
 const SearchFilter = () => {
   const [product, setProduct] = useState([]);
@@ -38,7 +38,7 @@ const SearchFilter = () => {
             setSearch(e.target.value);
           }}
           fullWidth
-          label="Search for anything!"
+          label="Search for Images & videos!"
         />
       </form>
 

@@ -1,11 +1,11 @@
 import React from "react";
 import {} from "@material-ui/core";
-import GaleryVideos from "../../components/Galery/GaleryVideos";
+import SearchVideos from "../../components/Search/SearchVideos";
 
 const PageOne = (props) => {
   return (
     <div>
-      <GaleryVideos />
+      <SearchVideos />
     </div>
   );
 };
