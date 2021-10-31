@@ -1,31 +1,14 @@
 import React from "react";
-import { TextField } from "@material-ui/core";
-import classes from "./Input.module.scss";
-
-const Input = (props) => {
-  return (
-    <div className={classes.root}>
-      <form className={classes.form}>
-        <TextField
-          className={classes.textField}
-          onChange={props.change}
-          fullWidth
-          label="Search for anything!"
-        />
-      </form>
-    </div>
-  );
-};
-
-export default Input;
-
-/*
-import React from "react";
 import axios from "axios";
-import { TextField } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import classes from "./Galery/GaleryVideos.module.scss";
-import { ImageList, ImageListItem, ImageListItemBar } from "@material-ui/core";
+import {
+  GridList,
+  TextField,
+  ImageListItemBar,
+  GridListTile,
+} from "@material-ui/core";
+import { AiFillPlayCircle } from "react-icons/ai";
+import classes from "../Galery/Galery.module.scss";
 
 const SearchFilter = () => {
   const [product, setProduct] = useState([]);
@@ -51,11 +34,14 @@ const SearchFilter = () => {
       <form className={classes.form}>
         <TextField
           className={classes.textField}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
           fullWidth
           label="Search for anything!"
         />
       </form>
-      
+
       {product
         .filter((item) => {
           if (search === "") {
@@ -67,9 +53,9 @@ const SearchFilter = () => {
         .map((item) => {
           if (item.type === 0) {
             return (
-              <div>
-                <ImageList className={classes.list} cellHeight={200} cols={4}>
-                  <ImageListItem cols={(item.width / 2).toFixed(0)}>
+              <div className={classes.row}>
+                <GridList className={classes.list} cellHeight={200} cols={4}>
+                  <GridListTile cols={(item.width / 3).toFixed(0)}>
                     <a href="/page-four">
                       <img
                         className={classes.item}
@@ -80,8 +66,30 @@ const SearchFilter = () => {
                       />
                       <ImageListItemBar title={item.name} />
                     </a>
-                  </ImageListItem>
-                </ImageList>
+                  </GridListTile>
+                </GridList>
+              </div>
+            );
+          }
+          if (item.type === 1) {
+            return (
+              <div className={classes.row}>
+                <GridList className={classes.list} cellHeight={200} cols={4}>
+                  <GridListTile cols={(item.width / 2).toFixed(0)}>
+                    <a href="/page-four">
+                      <AiFillPlayCircle className={classes.playIcon} />
+                      <video
+                        className={classes.video}
+                        alt="alt"
+                        src={item.url_original}
+                        key={item.url_original}
+                        loading="lazy"
+                      />
+
+                      <ImageListItemBar title={item.name} />
+                    </a>
+                  </GridListTile>
+                </GridList>
               </div>
             );
           }
@@ -91,4 +99,3 @@ const SearchFilter = () => {
 };
 
 export default SearchFilter;
-*/

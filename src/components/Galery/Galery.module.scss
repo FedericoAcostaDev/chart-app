@@ -1,5 +1,12 @@
 @import "../../styles/variables.scss";
 
+.root {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .icon {
   height: 100vh;
   display: flex;
@@ -7,11 +14,39 @@
   align-items: center;
 }
 
-.list {
+.row {
+  flex-direction: row;
   flex-grow: 1;
   justify-content: center;
 }
-.image {
+
+.list {
+  justify-content: center;
+}
+.item {
+  height: 200px;
+  width: 200px;
+}
+
+.form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 95vw;
+  height: 60px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.2s;
+  box-shadow: 0 0 0 2px rgb(42, 42, 42);
+}
+.playIcon {
+  height: auto;
+  width: 50px;
+}
+.video {
   height: 200px;
   width: 200px;
 }
