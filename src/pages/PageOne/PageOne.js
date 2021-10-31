@@ -2,14 +2,11 @@ import React from "react";
 import Galery from "../../components/Galery/Galery";
 import {} from "@material-ui/core";
 import Input from "../../components/Input";
+import classes from "./PageOne.module.scss";
 
 const PageOne = (props) => {
   return (
-    <div
-      style={{
-        marginTop: "5vh",
-      }}
-    >
+    <div className={classes.root}>
       <Input />
       <Galery />
     </div>

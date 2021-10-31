@@ -14,7 +14,7 @@ const Home = () => {
       <Collapse
         in={checked}
         {...(checked ? { timeout: 2000 } : {})}
-        collapsedHeight={100}
+        collapsedHeight={20}
       >
         <div className={classes.container}>
           <h1 className={classes.title}>

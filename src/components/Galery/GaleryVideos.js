@@ -6,6 +6,7 @@ import {
   ImageListItemBar,
 } from "@material-ui/core";
 import { AiFillPlayCircle } from "react-icons/ai";
+import classes from "./GaleryVideos.module.scss";
 
 export default class GaleryVideos extends React.Component {
   state = {
@@ -29,14 +30,7 @@ export default class GaleryVideos extends React.Component {
   render() {
     if (this.state.loading) {
       return (
-        <div
-          style={{
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <div className={classes.circularIcon}>
           <CircularProgress size={100} />
         </div>
       );
@@ -48,32 +42,17 @@ export default class GaleryVideos extends React.Component {
 
     return (
       <div>
-        <ImageList
-          cellHeight={200}
-          cols={4}
-          style={{
-            flexGrow: "1",
-            justifyContent: "center",
-          }}
-        >
+        <ImageList className={classes.list} cellHeight={200} cols={4}>
           {this.state.image.map((image) => (
             <ImageListItem cols={(image.width / 2).toFixed(0)}>
               <a href="/page-four">
-                <AiFillPlayCircle
-                  style={{
-                    height: "auto",
-                    width: "50px",
-                  }}
-                />
+                <AiFillPlayCircle className={classes.playIcon} />
                 <video
+                  className={classes.video}
                   alt="alt"
                   src={image.url_original}
                   key={image.url_original}
                   loading="lazy"
-                  style={{
-                    height: "200px",
-                    width: "200px",
-                  }}
                 />
 
                 <ImageListItemBar title={image.name} />
