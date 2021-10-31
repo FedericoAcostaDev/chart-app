@@ -20,7 +20,7 @@ const Home = () => {
           <h1 className={classes.title}>
             WELCOME TO TEKAL <br />
             <span className={classes.colorText}>
-              Select a category to start
+              Select a file type to start
             </span>
           </h1>
         </div>
