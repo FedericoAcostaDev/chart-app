@@ -42,7 +42,10 @@
   transition: 0.2s;
   box-shadow: 0 0 0 2px rgb(42, 42, 42);
 }
+
 .playIcon {
+  opacity: 0.8;
+  position: absolute;
   height: auto;
   width: 50px;
 }
