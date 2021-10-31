@@ -7,7 +7,7 @@ import classes from "./PageOne.module.scss";
 const PageOne = (props) => {
   return (
     <div className={classes.root}>
-      <Input />
+      <Input className={classes.search} />
       <Galery />
     </div>
   );

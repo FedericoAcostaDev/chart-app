@@ -1,15 +1,19 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
+import classes from "./Input.module.scss";
 
 const Input = (props) => {
   return (
-    <form style={{ margin: "1rem 0" }}>
-      <TextField
-        onChange={props.change}
-        fullWidth
-        label="Search for anything!"
-      />
-    </form>
+    <div className={classes.root}>
+      <form>
+        <TextField
+          className={classes.textField}
+          onChange={props.change}
+          fullWidth
+          label="Search for anything!"
+        />
+      </form>
+    </div>
   );
 };
 
