@@ -5,11 +5,7 @@ import Galery from "../../components/Galery/Galery";
 import Input from "../../components/Input";
 const PageThree = (props) => {
   return (
-    <div
-      style={{
-        marginTop: "5vh",
-      }}
-    >
+    <div>
       <Input />
       <GaleryVideos />
       <Galery />

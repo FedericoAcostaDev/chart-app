@@ -5,7 +5,7 @@ import classes from "./Input.module.scss";
 const Input = (props) => {
   return (
     <div className={classes.root}>
-      <form>
+      <form className={classes.form}>
         <TextField
           className={classes.textField}
           onChange={props.change}
