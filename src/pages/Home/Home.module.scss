@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: inherit;
+}
+
+.colorText {
+  color: #f22c9f;
+}
+.container {
+  text-align: center;
+}
+.title {
+  color: #cbccbe;
+  font-size: 3.5rem;
+}
+.goDown {
+  color: #5aff3d;
+  font-size: 4rem;
+}

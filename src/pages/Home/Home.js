@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import classes from "./Home.module.scss";
+import { Collapse } from "@material-ui/core";
+
+//import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const Home = () => {
-  return <div></div>;
+  const [checked, setChecked] = useState(false);
+  useEffect(() => {
+    setChecked(true);
+  }, []);
+  return (
+    <div className={classes.root}>
+      <Collapse
+        in={checked}
+        {...(checked ? { timeout: 2000 } : {})}
+        collapsedHeight={100}
+      >
+        <div className={classes.container}>
+          <h1 className={classes.title}>
+            WELCOME TO TEKAL <br />
+            <span className={classes.colorText}>
+              Select a category to start
+            </span>
+          </h1>
+        </div>
+      </Collapse>
+    </div>
+  );
 };
 
 export default Home;
