@@ -8,6 +8,25 @@ import {
   Typography,
 } from "@material-ui/core";
 
+/*
+id
+name
+perc_score_m1
+perc_score_m2
+perc_score_m3
+type
+url_original
+sector
+date
+global_txt_sal
+perc_scores_m1
+perc_scores_m2
+perc_scores_m3
+fps
+frame_count
+duration
+*/
+
 class Dashboard extends Component {
   render() {
     const { match } = this.props;
@@ -22,7 +41,7 @@ class Dashboard extends Component {
                 Name
               </Typography>
               <Typography color="textPrimary" variant="h3">
-                {match.params.item}
+                {match.params.id}
               </Typography>
             </Grid>
           </Grid>

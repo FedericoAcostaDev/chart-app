@@ -22,7 +22,7 @@ function App() {
         <Route path="/page-three">
           <PageThree />
         </Route>
-        <Route path="/page-four" component={Dashboard}></Route>
+        <Route path="/page-four/:id" component={Dashboard}></Route>
       </Switch>
     </Layout>
   );
