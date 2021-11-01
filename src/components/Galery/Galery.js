@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import {
   CircularProgress,
   ImageList,
@@ -61,3 +61,4 @@ export default class Galery extends React.Component {
     );
   }
 }
+*/

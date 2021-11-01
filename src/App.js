@@ -5,6 +5,7 @@ import PageOne from "./pages/PageOne/PageOne";
 import PageTwo from "./pages/PageTwo/PageTwo";
 import PageThree from "./pages/PageThree/PageThree";
 import PageFour from "./pages/PageFour/PageFour";
+import Dashboard from "./components/dashboard/Dashboard";
 function App() {
   return (
     <Layout>
@@ -21,9 +22,7 @@ function App() {
         <Route path="/page-three">
           <PageThree />
         </Route>
-        <Route path="/page-four">
-          <PageFour />
-        </Route>
+        <Route path="/:page-four" component={Dashboard}></Route>
       </Switch>
     </Layout>
   );

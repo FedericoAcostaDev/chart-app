@@ -7,9 +7,10 @@ import {
   ImageListItemBar,
   GridListTile,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import classes from "./Galery.module.scss";
 
-const SearchImages = () => {
+const SearchImages = ({ name, id, url_original }) => {
   const [product, setProduct] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -18,7 +19,8 @@ const SearchImages = () => {
       const data = await axios.get(
         "https://dev-cognitive-dashboard-server.herokuapp.com/techtest"
       );
-      console.log(data.data);
+
+      //console.log(data.data);
       setProduct(data.data);
     } catch (e) {
       console.log(e);
@@ -55,7 +57,7 @@ const SearchImages = () => {
               <div className={classes.row}>
                 <GridList className={classes.list} cellHeight={200} cols={4}>
                   <GridListTile cols={(item.width / 3).toFixed(0)}>
-                    <a href="/page-four">
+                    <Link to={`/page-four/${item.id}`}>
                       <img
                         className={classes.item}
                         alt="alt"
@@ -64,7 +66,7 @@ const SearchImages = () => {
                         loading="lazy"
                       />
                       <ImageListItemBar title={item.name} />
-                    </a>
+                    </Link>
                   </GridListTile>
                 </GridList>
               </div>
