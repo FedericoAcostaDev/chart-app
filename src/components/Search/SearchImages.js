@@ -49,6 +49,8 @@ const SearchImages = ({ name, id, url_original }) => {
             return item;
           } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
             return item;
+          } else {
+            return item;
           }
         })
         .map((item) => {
@@ -71,6 +73,8 @@ const SearchImages = ({ name, id, url_original }) => {
                 </GridList>
               </div>
             );
+          } else {
+            return null;
           }
         })}
     </div>

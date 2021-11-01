@@ -11,6 +11,7 @@ import {
 class Dashboard extends Component {
   render() {
     const { match } = this.props;
+    console.log(match);
     return (
       //name item
       <Card sx={{ height: "100%" }}>
