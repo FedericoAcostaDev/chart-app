@@ -22,12 +22,13 @@
 
 .list {
   justify-content: center;
-}
-.list:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transition: 0.4s;
-  transform: scale(1.05);
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transition: 0.4s;
+    transform: scale(1.05);
+  }
 }
 
 .item {
