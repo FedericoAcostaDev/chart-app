@@ -38,9 +38,9 @@ class Dashboard extends Component {
           <Grid container spacing={3} sx={{ justifyContent: "space-between" }}>
             <Grid item>
               <Typography color="textSecondary" gutterBottom variant="h6">
-                Name
+                Item ID
               </Typography>
-              <Typography color="textPrimary" variant="h3">
+              <Typography color="textPrimary" variant="h5">
                 {match.params.id}
               </Typography>
             </Grid>
