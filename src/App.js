@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import PageOne from "./pages/PageOne/PageOne";
 import PageTwo from "./pages/PageTwo/PageTwo";
 import PageThree from "./pages/PageThree/PageThree";
-import PageFour from "./pages/PageFour/PageFour";
+
 import Dashboard from "./components/dashboard/Dashboard";
 function App() {
   return (
